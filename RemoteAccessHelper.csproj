@@ -1,0 +1,35 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <UseWindowsForms>true</UseWindowsForms>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <AssemblyTitle>Remote Access Helper</AssemblyTitle>
+    <AssemblyDescription>Remote Desktop Assistant Tool</AssemblyDescription>
+    <AssemblyCompany>IT Support</AssemblyCompany>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="configs\image.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="configs\config.wav" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="configs\config.wav">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AudioSwitcher.AudioApi" Version="4.0.0-alpha5" />
+    <PackageReference Include="AudioSwitcher.AudioApi.CoreAudio" Version="4.0.0-alpha5" />
+    <PackageReference Include="Microsoft.Windows.Compatibility" Version="6.0.7" />
+    <PackageReference Include="SixLabors.ImageSharp" Version="3.1.10" />
+  </ItemGroup>
+
+</Project> 
